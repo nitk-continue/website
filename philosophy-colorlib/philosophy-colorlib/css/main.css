@@ -1785,8 +1785,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .header__logo img {
-   width: 265px;
-   height: 48px;
+   min-height: 128px;
+   max-height: 256px;
 }
 
 
