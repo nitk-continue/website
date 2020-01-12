@@ -1,10 +1,11 @@
 {% load static %}
 
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
 
-    <!--- basic page needs
+  <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
     <title>Philosophy</title>
@@ -37,14 +38,14 @@
 
     <!-- pageheader
     ================================================== -->
-    <section class="s-pageheader s-pageheader--home">
+    <div class="s-pageheader">
 
         <header class="header">
             <div class="header__content row">
 
                 <div class="header__logo">
                     <a class="logo" href="index.html">
-                        <img src="{% static 'homepage/images/logo.svg' %}" alt="Homepage">
+                        <img src="images/logo.svg" alt="Homepage">
                     </a>
                 </div> <!-- end header__logo -->
 
@@ -52,15 +53,15 @@
                     <li>
                         <a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                    </li> -->
+                    </li>
                     <li>
                         <a href="#0"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="#0"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                    </li> -->
+                    </li>
                 </ul> <!-- end header__social -->
 
                 <a class="header__search-trigger" href="#0"></a>
@@ -87,8 +88,8 @@
                     <h2 class="header__nav-heading h6">Site Navigation</h2>
 
                     <ul class="header__nav">
-                        <li class="current"><a href="index.html" title="">Home</a></li>
-                        <li class="has-children">
+                        <li><a href="index.html" title="">Home</a></li>
+                        <li class="has-children current">
                             <a href="#0" title="">Categories</a>
                             <ul class="sub-menu">
                             <li><a href="category.html">Lifestyle</a></li>
@@ -120,91 +121,20 @@
             </div> <!-- header-content -->
         </header> <!-- header -->
 
-
-        <div class="pageheader-content row">
-            <div class="col-full">
-
-                <div class="featured">
-
-                    <div class="featured__column featured__column--big">
-                        <div class="entry" style="background-image:url('images/thumbs/featured/featured-guitarman.jpg');">
-                            
-                            <div class="entry__content">
-                                <span class="entry__category"><a href="#0">Music</a></span>
-
-                                <h1><a href="#0" title="">What Your Music Preference Says About You and Your Personality.</a></h1>
-
-                                <div class="entry__info">
-                                    <a href="#0" class="entry__profile-pic">
-                                        <img class="avatar" src="images/avatars/user-03.jpg" alt="">
-                                    </a>
-
-                                    <ul class="entry__meta">
-                                        <li><a href="#0">John Doe</a></li>
-                                        <li>December 29, 2017</li>
-                                    </ul>
-                                </div>
-                            </div> <!-- end entry__content -->
-                            
-                        </div> <!-- end entry -->
-                    </div> <!-- end featured__big -->
-
-                    <div class="featured__column featured__column--small">
-
-                        <div class="entry" style="background-image:url('images/thumbs/featured/featured-watch.jpg');">
-                            
-                            <div class="entry__content">
-                                <span class="entry__category"><a href="#0">Management</a></span>
-
-                                <h1><a href="#0" title="">The Pomodoro Technique Really Works.</a></h1>
-
-                                <div class="entry__info">
-                                    <a href="#0" class="entry__profile-pic">
-                                        <img class="avatar" src="images/avatars/user-03.jpg" alt="">
-                                    </a>
-
-                                    <ul class="entry__meta">
-                                        <li><a href="#0">John Doe</a></li>
-                                        <li>December 27, 2017</li>
-                                    </ul>
-                                </div>
-                            </div> <!-- end entry__content -->
-                          
-                        </div> <!-- end entry -->
-
-                        <div class="entry" style="background-image:url('images/thumbs/featured/featured-beetle.jpg');">
-
-                            <div class="entry__content">
-                                <span class="entry__category"><a href="#0">LifeStyle</a></span>
-
-                                <h1><a href="#0" title="">Throwback To The Good Old Days.</a></h1>
-
-                                <div class="entry__info">
-                                    <a href="#0" class="entry__profile-pic">
-                                        <img class="avatar" src="images/avatars/user-03.jpg" alt="">
-                                    </a>
-
-                                    <ul class="entry__meta">
-                                        <li><a href="#0">John Doe</a></li>
-                                        <li>December 21, 2017</li>
-                                    </ul>
-                                </div>
-                            </div> <!-- end entry__content -->
-
-                        </div> <!-- end entry -->
-
-                    </div> <!-- end featured__small -->
-                </div> <!-- end featured -->
-
-            </div> <!-- end col-full -->
-        </div> <!-- end pageheader-content row -->
-
-    </section> <!-- end s-pageheader -->
+    </div> <!-- end s-pageheader -->
 
 
     <!-- s-content
     ================================================== -->
     <section class="s-content">
+
+        <div class="row narrow">
+            <div class="col-full s-content__header" data-aos="fade-up">
+                <h1>Category: Lifestyle</h1>
+
+                <p class="lead">Dolor similique vitae. Exercitationem quidem occaecati iusto. Id non vitae enim quas error dolor maiores ut. Exercitationem earum ut repudiandae optio veritatis animi nulla qui dolores.</p>
+            </div>
+        </div>
         
         <div class="row masonry-wrap">
             <div class="masonry">
@@ -216,7 +146,7 @@
                     <div class="entry__thumb">
                         <a href="single-standard.html" class="entry__thumb-link">
                             <img src="images/thumbs/masonry/lamp-400.jpg" 
-                                    srcset="images/thumbs/masonry/lamp-400.jpg 1x, images/thumbs/masonry/lamp-800.jpg 2x" alt="">
+                                 srcset="images/thumbs/masonry/lamp-400.jpg 1x, images/thumbs/masonry/lamp-800.jpg 2x" alt="">
                         </a>
                     </div>
     
@@ -256,12 +186,12 @@
     
                 </article> <!-- end article -->
 
-                <article class="masonry__brick entry format-standard" data-aos="fade-up">
+                <article class="masonry__brick entry format-standard">
                         
                     <div class="entry__thumb">
                         <a href="single-standard.html" class="entry__thumb-link">
                             <img src="images/thumbs/masonry/tulips-400.jpg" 
-                                    srcset="images/thumbs/masonry/tulips-400.jpg 1x, images/thumbs/masonry/tulips-800.jpg 2x" alt="">
+                                 srcset="images/thumbs/masonry/tulips-400.jpg 1x, images/thumbs/masonry/tulips-800.jpg 2x" alt="">
                         </a>
                     </div>
     
@@ -293,7 +223,7 @@
                     <div class="entry__thumb">
                         <a href="single-standard.html" class="entry__thumb-link">
                             <img src="images/thumbs/masonry/cookies-400.jpg" 
-                                    srcset="images/thumbs/masonry/cookies-400.jpg 1x, images/thumbs/masonry/cookies-800.jpg 2x" alt="">
+                                 srcset="images/thumbs/masonry/cookies-400.jpg 1x, images/thumbs/masonry/cookies-800.jpg 2x" alt="">
                         </a>
                     </div>
     
@@ -326,7 +256,7 @@
                     <div class="entry__thumb">
                         <a href="single-standard.html" class="entry__thumb-link">
                             <img src="images/thumbs/masonry/wheel-400.jpg" 
-                                    srcset="images/thumbs/masonry/wheel-400.jpg 1x, images/thumbs/masonry/wheel-800.jpg 2x" alt="">
+                                 srcset="images/thumbs/masonry/wheel-400.jpg 1x, images/thumbs/masonry/wheel-800.jpg 2x" alt="">
                         </a>
                     </div>
     
@@ -359,7 +289,7 @@
                     <div class="entry__thumb video-image">
                         <a href="https://player.vimeo.com/video/117310401?color=01aef0&title=0&byline=0&portrait=0" data-lity>
                             <img src="images/thumbs/masonry/shutterbug-400.jpg" 
-                                    srcset="images/thumbs/masonry/shutterbug-400.jpg 1x, images/thumbs/masonry/shutterbug-800.jpg 2x" alt="">
+                                 srcset="images/thumbs/masonry/shutterbug-400.jpg 1x, images/thumbs/masonry/shutterbug-800.jpg 2x" alt="">
                         </a>
                     </div>
     
@@ -394,15 +324,15 @@
                         <div class="slider__slides">
                             <div class="slider__slide">
                                 <img src="images/thumbs/masonry/gallery/gallery-1-400.jpg" 
-                                        srcset="images/thumbs/masonry/gallery/gallery-1-400.jpg 1x, images/thumbs/masonry/gallery/gallery-1-800.jpg 2x" alt=""> 
+                                     srcset="images/thumbs/masonry/gallery/gallery-1-400.jpg 1x, images/thumbs/masonry/gallery/gallery-1-800.jpg 2x" alt=""> 
                             </div>
                             <div class="slider__slide">
                                 <img src="images/thumbs/masonry/gallery/gallery-2-400.jpg" 
-                                        srcset="images/thumbs/masonry/gallery/gallery-2-400.jpg 1x, images/thumbs/masonry/gallery/gallery-2-800.jpg 2x" alt=""> 
+                                     srcset="images/thumbs/masonry/gallery/gallery-2-400.jpg 1x, images/thumbs/masonry/gallery/gallery-2-800.jpg 2x" alt=""> 
                             </div>
                             <div class="slider__slide">
                                 <img src="images/thumbs/masonry/gallery/gallery-3-400.jpg" 
-                                        srcset="images/thumbs/masonry/gallery/gallery-3-400.jpg 1x, images/thumbs/masonry/gallery/gallery-3-800.jpg 2x" alt="">  
+                                     srcset="images/thumbs/masonry/gallery/gallery-3-400.jpg 1x, images/thumbs/masonry/gallery/gallery-3-800.jpg 2x" alt="">  
                             </div>
                         </div>
                     </div>
@@ -436,7 +366,7 @@
                     <div class="entry__thumb">
                         <a href="single-audio.html" class="entry__thumb-link">
                             <img src="images/thumbs/masonry/guitarman-400.jpg" 
-                                    srcset="images/thumbs/masonry/guitarman-400.jpg 1x, images/thumbs/masonry/guitarman-800.jpg 2x" alt="">
+                                 srcset="images/thumbs/masonry/guitarman-400.jpg 1x, images/thumbs/masonry/guitarman-800.jpg 2x" alt="">
                         </a>
                         <div class="audio-wrap">
                             <audio id="player" src="media/AirReview-Landmarks-02-ChasingCorporate.mp3" width="100%" height="42" controls="controls"></audio>
@@ -485,7 +415,7 @@
                     <div class="entry__thumb">
                         <a href="single-standard.html" class="entry__thumb-link">
                             <img src="images/thumbs/masonry/jump-400.jpg" 
-                                    srcset="images/thumbs/masonry/jump-400.jpg 1x, images/thumbs/masonry/jump-800.jpg 2x" alt="">
+                                 srcset="images/thumbs/masonry/jump-400.jpg 1x, images/thumbs/masonry/jump-800.jpg 2x" alt="">
                         </a>
                     </div>
 
@@ -518,7 +448,7 @@
                     <div class="entry__thumb">
                         <a href="single-standard.html" class="entry__thumb-link">
                             <img src="images/thumbs/masonry/beetle-400.jpg" 
-                                    srcset="images/thumbs/masonry/beetle-400.jpg 1x, images/thumbs/masonry/beetle-800.jpg 2x" alt="">
+                                 srcset="images/thumbs/masonry/beetle-400.jpg 1x, images/thumbs/masonry/beetle-800.jpg 2x" alt="">
                         </a>
                     </div>
 
@@ -550,7 +480,7 @@
                     <div class="entry__thumb">
                         <a href="single-standard.html" class="entry__thumb-link">
                             <img src="images/thumbs/masonry/fuji-400.jpg" 
-                                    srcset="images/thumbs/masonry/fuji-400.jpg 1x, images/thumbs/masonry/fuji-800.jpg 2x" alt="">
+                                 srcset="images/thumbs/masonry/fuji-400.jpg 1x, images/thumbs/masonry/fuji-800.jpg 2x" alt="">
                         </a>
                     </div>
 
@@ -583,7 +513,7 @@
                     <div class="entry__thumb">
                         <a href="single-standard.html" class="entry__thumb-link">
                             <img src="images/thumbs/masonry/sydney-400.jpg" 
-                                    srcset="images/thumbs/masonry/sydney-400.jpg 1x, images/thumbs/masonry/sydney-800.jpg 2x" alt="">
+                                 srcset="images/thumbs/masonry/sydney-400.jpg 1x, images/thumbs/masonry/sydney-800.jpg 2x" alt="">
                         </a>
                     </div>
 
@@ -633,7 +563,7 @@
         </div>
 
     </section> <!-- s-content -->
-
+    
 
     <!-- s-extra
     ================================================== -->
@@ -651,7 +581,7 @@
                         </a>
                         <h5><a href="#0">Visiting Theme Parks Improves Your Health.</a></h5>
                         <section class="popular__meta">
-                                <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
+                             <span class="popular__author"><span>By</span> <a href="#0"> John Doe</a></span>
                             <span class="popular__date"><span>on</span> <time datetime="2017-12-19">Dec 19, 2017</time></span>
                         </section>
                     </article>
@@ -869,7 +799,5 @@
     <script src="{% static 'homepage/jquery-3.2.1.min.js' %}"></script>
     <script src="{% static 'homepage/js/plugins.js' %}"></script>
     <script src="{% static 'homepage/js/main.js' %}"></script>
-
-</body>
 
 </html>
