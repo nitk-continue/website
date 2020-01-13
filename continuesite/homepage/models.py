@@ -1,3 +1,6 @@
+from datetime import date
+from typing import List, Union
+
 from django.db import models
 
 
@@ -6,13 +9,38 @@ from django.db import models
 class Tag(models.Model):
     name = models.CharField(max_length=20)
 
+    def __str__(self):
+        return f'Tag(name={self.name})'
+
+    # After creating the tag, ensure that save() is called before adding to Post
+    @classmethod
+    def create(cls, name: str = ''):
+        return cls(name)
+
 
 class Post(models.Model):
     title = models.CharField(max_length=100)
     # By default, author is set to blank (indicating article)
-    author = models.CharField(max_length=70, blank=True, default="", db_index=True)
-    date = models.DateField()
+    author = models.CharField(max_length=70, blank=True, default='', db_index=True)
+    publish_date = models.DateField()
     # Enforcing max_length for TextField has no effect on DB storage
     content = models.TextField()
-    tags = models.ManyToManyField(Tag, db_table="PostTagRelation")
+    tags = models.ManyToManyField(Tag, db_table='PostTagRelation')
 
+    # Metadata for table
+    class Meta:
+        # Default ordering is descending order of publish_date, i.e., most recent posts first
+        ordering = ['-publish_date']
+
+    def __str__(self):
+        name = 'Article' if self.author == '' else 'Blog'
+        return f'{name}(title={self.title}, author={self.author}, date={self.publish_date}, content={self.content}, ' \
+               f'tags={self.tags})'
+
+    @classmethod
+    def create(cls, title: str = '', author: str = '', publish_date: date = date.today(), content: str = '',
+               tags: Union[List[Tag], None] = None):
+        # Tags may be a list of str or NoneType
+        if tags is None:
+            tags = []
+        return cls(title, author, publish_date, content, tags)
