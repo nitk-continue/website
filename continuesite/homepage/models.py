@@ -25,7 +25,8 @@ class Post(models.Model):
     publish_date = models.DateField()
     # Enforcing max_length for TextField has no effect on DB storage
     content = models.TextField()
-    tags = models.ManyToManyField(Tag, db_table='PostTagRelation')
+    # While accessing associated posts with Tag, use tag.posts.all()
+    tags = models.ManyToManyField(Tag, db_table='PostTagRelation', related_name='posts')
 
     # Metadata for table
     class Meta:
