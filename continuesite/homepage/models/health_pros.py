@@ -1,4 +1,5 @@
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
 
 
 class HealthProfessional(models.Model):
@@ -6,9 +7,9 @@ class HealthProfessional(models.Model):
     name = models.CharField(max_length=70)
     designation = models.CharField(max_length=50)
     location = models.CharField(max_length=100)
-    phone_number = models.CharField(max_length=10)
+    phone_number = PhoneNumberField(region='IN')
     email_id = models.EmailField(blank=True, default='')
-    remarks = models.TextField(default='')
+    remarks = models.TextField(default='', blank=True)
 
     def __str__(self):
         return f'HealthProfessional(name={self.name}, designation={self.designation}, location={self.location}, ' \
