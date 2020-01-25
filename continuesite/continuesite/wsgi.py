@@ -11,6 +11,12 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
+"""
+    TODO: Update default settings module
+    @author: aayush
+    @date: 25/01/20
+    @time: 5:11 PM
+"""
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'continuesite.settings')
 
 application = get_wsgi_application()

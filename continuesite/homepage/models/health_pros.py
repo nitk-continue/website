@@ -9,9 +9,12 @@ class HealthProfessional(models.Model):
     location = models.CharField(max_length=100)
     phone_number = PhoneNumberField(region='IN')
     email_id = models.EmailField(blank=True, default='')
-    remarks = models.TextField(default='', blank=True)
+    remarks = models.TextField(blank=True, default='')
 
     def __str__(self):
+        return f'{self.name}, {self.designation}'
+
+    def __repr__(self):
         return f'HealthProfessional(name={self.name}, designation={self.designation}, location={self.location}, ' \
                f'phone_number={self.phone_number}, email_id={self.email_id}, remarks={self.remarks})'
 

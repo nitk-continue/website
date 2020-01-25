@@ -11,6 +11,9 @@ class Tag(models.Model):
     name = models.CharField(max_length=20)
 
     def __str__(self):
+        return self.name
+
+    def __repr__(self):
         return f'Tag(name={self.name})'
 
     # After creating the tag, ensure that save() is called before adding to Post
@@ -36,6 +39,9 @@ class Post(models.Model):
         ordering = ['-publish_date']
 
     def __str__(self):
+        return f'{self.title} by {self.author}'
+
+    def __repr__(self):
         name = 'Article' if self.author == '' else 'Blog'
         return f'{name}(title={self.title}, author={self.author}, date={self.publish_date}, content={self.content}, ' \
                f'tags={self.tags})'

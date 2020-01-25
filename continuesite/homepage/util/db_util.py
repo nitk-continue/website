@@ -2,7 +2,7 @@ from typing import Union
 
 from django.db.models.query import QuerySet
 
-from .models import *
+from continuesite.homepage.models import *
 
 
 def fetch_all_health_pros() -> QuerySet:
